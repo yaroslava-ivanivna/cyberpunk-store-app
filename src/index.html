@@ -4,19 +4,45 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Cyberpunk App Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
+    <!-- Шапка веб сторінки-->
+    <header>
+      <div class="container header-container">
+        <nav class="page-nav">
+          <a href="./index.html" class="weblogo header-logo">
+            Cyber<span class="logo-span-part">Glow</span></a
+          >
+          <ul class="header-nav-list">
+            <li>
+              <a href="./index.html" class="first-navigation-link">[Shop] </a>
+            </li>
+            <li>
+              <a href="./index.html" class="first-navigation-link current"
+                >[About]
+              </a>
+            </li>
+            <li>
+              <a href="./index.html" class="first-navigation-link current"
+                >[Payment and delivery]
+              </a>
+            </li>
+            <li>
+              <a href="./index.html" class="first-navigation-link current"
+                >[Contacts]
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main></main>
 
     <script type="module" src="./main.js"></script>
   </body>
