@@ -257,3 +257,136 @@
     left: 200%;
   }
 }
+
+/* @keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  22%,
+  24%,
+  55% {
+    opacity: 0;
+  }
+} */
+
+.store-section-container {
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px #00ff88;
+  border-radius: 10px;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  /* animation: flicker 2s infinite; */
+}
+#radiationCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  animation: glitchShift 4s infinite;
+}
+
+@keyframes glitchShift {
+  0%,
+  100% {
+    transform: none;
+  }
+  45% {
+    transform: translate(1px, -1px) skewX(0.5deg);
+  }
+  50% {
+    transform: translate(-1px, 1px) skewY(0.5deg);
+  }
+  55% {
+    transform: translate(0.5px, -0.5px);
+  }
+}
+.store-section-content-wrapper {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+}
+.cyberglow-store-section-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: -1.5%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.store-section-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  max-width: 440px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.store-section-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.store-section-list-item {
+  flex: 0 0 calc(33.333% - 13.33px); /* три в ряд */
+  box-sizing: border-box;
+}
+.cyberglow-store-section-title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: -1.5%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: rgba(251, 251, 251, 1);
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  animation: glow 1.5s infinite alternate;
+  margin-bottom: 24px;
+}
+.cyberglow-store-section-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  max-width: 620px;
+  margin-bottom: 50px;
+}
+.cyberglow-store-section-card-title {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.store-section-card-text {
+  margin-bottom: 14px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
