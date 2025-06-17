@@ -390,3 +390,106 @@
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
+.cyberstore-review-section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px #00ff88;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #00ffea;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  max-width: 1280px;
+  border: 2px solid #00ffea;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #111111, #1a1a1a);
+}
+.cyberglow-store-review-section-title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 64px;
+  letter-spacing: -1.5%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.review-section-info {
+  padding-bottom: 52px;
+}
+.reviews-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 1280px;
+  padding: 20px 20px;
+  margin-bottom: 25px;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 28px;
+}
+.users-reviews {
+  flex: 0 0 210px; /* фіксована ширина однієї картки */
+  min-width: 210px;
+  background: #111;
+  border: 1px solid #00ffea;
+  padding: 15px;
+  border-radius: 8px;
+  color: #00ffea;
+  text-shadow: 0 0 5px #00ffea;
+  box-shadow: 0 0 10px #00ffea44;
+}
+
+.users-reviews:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00ff66, inset 0 0 15px #00ffea55;
+}
+.cyber-avatar {
+  background-color: rgb(189, 181, 181);
+  border-radius: 50%;
+  border: 2px solid #00ffea;
+  box-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #ff00ff;
+  padding: 3px;
+  transition: transform 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.cyber-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #ff00ff;
+}
+.users-review-name {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff, 0 0 12px #ff00ff66;
+}
+.nav-btn {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-40%);
+  background: #000;
+  color: #00ffea;
+  border: 2px solid #00ffea;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav-btn.prev {
+  left: 20px;
+}
+.nav-btn.next {
+  right: 20px;
+}

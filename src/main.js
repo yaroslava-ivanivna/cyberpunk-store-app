@@ -69,3 +69,70 @@ for (let i = 0; i < 150; i++) {
   particles.push(createParticle());
 }
 animate();
+// Slider //
+// const track = document.querySelector('.reviews-loop');
+// const prev = document.querySelector('.nav-btn.prev');
+// const next = document.querySelector('.nav-btn.next');
+// const reviews = document.querySelectorAll('.users-reviews');
+
+// let currentSlide = 0;
+// const reviewsPerPage = 3;
+// const totalSlides = Math.ceil(reviews.length / reviewsPerPage);
+
+// function updateSlider() {
+//   const width = reviews[0].offsetWidth + 24; // ширина + gap
+//   track.style.transform = `translateX(-${
+//     currentSlide * width * reviewsPerPage
+//   }px)`;
+// }
+
+// next.addEventListener('click', () => {
+//   if (currentSlide < totalSlides - 1) {
+//     currentSlide++;
+//     updateSlider();
+//   }
+// });
+
+// prev.addEventListener('click', () => {
+//   if (currentSlide > 0) {
+//     currentSlide--;
+//     updateSlider();
+//   }
+// });
+
+const track = document.querySelector('.reviews-loop');
+const cards = document.querySelectorAll('.users-reviews');
+const prevBtn = document.querySelector('.nav-btn.prev');
+const nextBtn = document.querySelector('.nav-btn.next');
+
+let currentIndex = 0;
+const cardsPerView = 3;
+
+function updateSlider() {
+  const cardWidth = cards[0].offsetWidth + 24; // ширина + gap
+  const offset = currentIndex * cardWidth;
+  track.style.transform = `translateX(-${offset}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < cards.length - cardsPerView) {
+    currentIndex++;
+    updateSlider();
+  } else {
+    currentIndex = 0; // зациклення
+    updateSlider();
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlider();
+  } else {
+    currentIndex = cards.length - cardsPerView; // зациклення назад
+    updateSlider();
+  }
+});
+
+window.addEventListener('resize', updateSlider);
+updateSlider();
